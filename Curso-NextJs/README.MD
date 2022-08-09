@@ -2,7 +2,7 @@
 
 **Nombre**: Next.js: El framework de React para producción
 
-**Link**: https://www.udemy.com/course/nextjs-fh
+**Link**: [https://www.udemy.com/course/nextjs-fh]
 
 ## Sesiones y anotaciones respectivas
 
