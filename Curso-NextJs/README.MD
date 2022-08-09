@@ -2,11 +2,13 @@
 
 **Nombre**: Next.js: El framework de React para producción
 
-Link:
+**Link**: https://www.udemy.com/course/nextjs-fh
 
 ## Sesiones y anotaciones respectivas
 
 ### 28. Archivos de JavaScript a TypeScript
+
+El instructor está enseñando cómo realizar los cambios en objetos y props de JavaScript a TypeScript, usando strictmode (`"strict": true`).
 
 Dos observaciones:
 
@@ -18,7 +20,8 @@ Dos observaciones:
 
 2. El video del curso se desarrolló con React v17 y ahora estamos en React v18.
 
-    Hay un setting que se rompe porque los defaults cambian. La solución consiste en cambiar esto:
+    Hay un setting que se rompe porque los defaults cambian.
+    La solución consiste en cambiar esto:
 
 ````ts
 import { FC } from "react";
