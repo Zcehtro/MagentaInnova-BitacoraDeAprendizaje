@@ -120,3 +120,4 @@ type NextPageWithLayout = NextPage & {
 ````
 
 **Por qué usa signos de interrogación?**
+Respuesta: declarar atributo opcional.
