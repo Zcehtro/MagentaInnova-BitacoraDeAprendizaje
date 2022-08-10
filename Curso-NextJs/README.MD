@@ -15,6 +15,8 @@
       - [Problemas resueltos](#problemas-resueltos)
       - [Trivia](#trivia)
     - [29. Migrando _app.jsx a _app.tsx](#29-migrando-_appjsx-a-_apptsx)
+    - [49. Mostrar tarjetas de Pokémons](#49-mostrar-tarjetas-de-pokémons)
+      - [Problemas resueltos](#problemas-resueltos-1)
 
 ***
 
@@ -107,7 +109,11 @@ type Props = {
 
 Al parecer es más seguro usar `interface` porque se puede expandir y continuar elaborándolo. En cambio, `type` se define una sola vez.
 
-Artículo que explica la diferencia: <https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c>
+Artículos que explica la diferencia: 
+
+<https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c>
+
+<https://www.pluralsight.com/guides/defining-props-in-react-function-component-with-typescript>
 
 ### 29. Migrando _app.jsx a _app.tsx
 
@@ -121,3 +127,25 @@ type NextPageWithLayout = NextPage & {
 
 **Por qué usa signos de interrogación?**
 Respuesta: declarar atributo opcional.
+
+Documento que lo explica: <https://www.pluralsight.com/guides/defining-props-in-react-function-component-with-typescript>
+
+### 49. Mostrar tarjetas de Pokémons
+
+#### Problemas resueltos
+
+1. El instructor utiliza parámetros de props para el componente `Card` que han sido actualizados desde la grabación del video.
+
+Antes:
+
+````ts
+<Card hoverable clicable>
+</Card>
+````
+
+Después:
+
+````ts
+<Card isHoverable isPressable>
+</Card>
+````
