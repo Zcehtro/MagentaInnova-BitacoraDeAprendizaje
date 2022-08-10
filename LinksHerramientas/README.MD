@@ -4,9 +4,9 @@ Links a varias herramientas que se descubrieron y que serán de gran utilidad.
 
 ## Índice
 
-- [Bitácora personal de aprendizaje](#bitácora-personal-de-aprendizaje)
+- [Links a herramientas útiles](#links-a-herramientas-útiles)
   - [Índice](#índice)
-  - [Lista de libros de apuntes](#lista-de-libros-de-apuntes)
+  - [Lista de herramientas](#lista-de-herramientas)
 
 ## Lista de herramientas
 
