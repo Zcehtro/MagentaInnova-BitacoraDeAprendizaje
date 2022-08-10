@@ -17,6 +17,8 @@
     - [29. Migrando _app.jsx a _app.tsx](#29-migrando-_appjsx-a-_apptsx)
     - [49. Mostrar tarjetas de Pokémons](#49-mostrar-tarjetas-de-pokémons)
       - [Problemas resueltos](#problemas-resueltos-1)
+    - [64. Leer y verificar si existe en favoritos](#64-leer-y-verificar-si-existe-en-favoritos)
+      - [Problemas resueltos](#problemas-resueltos-2)
 
 ***
 
@@ -148,4 +150,44 @@ Después:
 ````ts
 <Card isHoverable isPressable>
 </Card>
+````
+
+### 64. Leer y verificar si existe en favoritos
+
+#### Problemas resueltos
+
+El instructor utiliza un estado inicializado con comandos ejecutados que según ciertas circunstancias (de velocidad de carga del servidor?) no siempre pueden ejecutarse correctamente.
+
+````ts
+ const [isInFavorites, setIsInFavorites] = useState(localFavorites.existInFavorites(pokemon.id));
+````
+
+Esto genera un error con la carga del localStorage con `existInFavorites`. Luego, la solución que él propone utilizando:
+
+````ts
+if (typeof window === 'undefined') return false;
+````
+
+no es la mejor según procedimientos recomendados por la documentación de Next.js.
+
+Se encontró una mejor alternativa utilizando useEffect. De esta manera la página puede iniciar correctamente sin tener que esperar a que la info esté lista.
+
+**Antes:**
+
+````ts
+  const [isInFavorites, setIsInFavorites] = useState(localFavorites.existInFavorites(pokemon.id));
+````
+
+**Después:**
+
+````ts
+  const [isInFavorites, setIsInFavorites] = useState(false);
+
+  const onToggleFavorite = () => {
+    localFavorites.toggleFavorite(pokemon.id);
+  };
+
+  useEffect(() => {
+    setIsInFavorites(localFavorites.existInFavorites(pokemon.id))
+  }, [pokemon.id]) 
 ````
