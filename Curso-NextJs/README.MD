@@ -183,10 +183,6 @@ Se encontró una mejor alternativa utilizando useEffect. De esta manera la pági
 ````ts
   const [isInFavorites, setIsInFavorites] = useState(false);
 
-  const onToggleFavorite = () => {
-    localFavorites.toggleFavorite(pokemon.id);
-  };
-
   useEffect(() => {
     setIsInFavorites(localFavorites.existInFavorites(pokemon.id))
   }, [pokemon.id]) 
