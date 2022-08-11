@@ -11,4 +11,4 @@ Links a varias herramientas que se descubrieron y que serán de gran utilidad.
 ## Lista de herramientas
 
 - <https://app.quicktype.io>
-  
+- <https://www.npmjs.com/package/canvas-confetti>
