@@ -10,6 +10,11 @@
 
 - [Sobre el curso de capacitación](#sobre-el-curso-de-capacitación)
   - [Índice](#índice)
+  - [SSR en general](#ssr-en-general)
+    - [¿Por qué usaría Next.js y SSR?:](#por-qué-usaría-nextjs-y-ssr)
+    - [PROs vs CONs](#pros-vs-cons)
+      - [PROs](#pros)
+      - [CONs](#cons)
   - [Sesiones y anotaciones respectivas](#sesiones-y-anotaciones-respectivas)
     - [28. Archivos de JavaScript a TypeScript](#28-archivos-de-javascript-a-typescript)
       - [Problema resueltos](#problema-resueltos)
@@ -24,6 +29,36 @@
       - [Aprendido](#aprendido-1)
 
 ***
+
+## SSR en general
+
+### ¿Por qué usaría Next.js y SSR?:
+
+- Mostly SEO. This is 95% of why people do it, I'm guessing.
+
+- It can make initial page load feel faster for lower powered or low bandwidth devices since they directly receive the HTML content of the page instead of having to load many JavaScript bundles (including React, itself) and then spend CPU cycles parsing that JavaScript and executing it all before they see the UI of the page.
+
+- It makes a website usable even with JavaScript disabled
+
+[Fuente: Reddit](https://www.reddit.com/r/nextjs/comments/qzo72r/comment/hlnfbw3/?utm_source=share&utm_medium=web2x&context=3)
+
+### PROs vs CONs
+
+#### PROs
+
+- The content is immediately available. That's going to make it look great on slow connections.
+
+- You're not required to make any additional API calls from the client.
+
+- Ideal for SEO. The search engine doesn't need to execute the JS in order to see what's on the page.
+
+#### CONs
+
+- Slower for the server. Basically, we're rendering the app twice: once for the client and once for the server.
+
+- Some UI frameworks can be incompatible with SSR because they are looking for the window element which is not available in the node context.
+
+[Fuente: Reddit](https://www.reddit.com/r/nextjs/comments/qzo72r/comment/hlrfukn/?utm_source=share&utm_medium=web2x&context=3)
 
 ## Sesiones y anotaciones respectivas
 
