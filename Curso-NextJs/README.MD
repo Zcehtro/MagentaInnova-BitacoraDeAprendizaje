@@ -114,7 +114,7 @@ type Props = {
 
 Al parecer es más seguro usar `interface` porque se puede expandir y continuar elaborándolo. En cambio, `type` se define una sola vez.
 
-Artículos que explica la diferencia: 
+Artículos que explican la diferencia:
 
 <https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c>
 
