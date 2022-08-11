@@ -234,13 +234,70 @@ Observamos que la navegación de la página durante el dev y el build era bastan
 
 #### Aprendido
 
-Se reveló que optimizando la cantidad de data que se pide al API puede reducir drásticamente el tamaño del build del server y por ende mejor también el rendimiento cuando se navega en el site.
+Se reveló que optimizando la cantidad de data que se pide al API puede reducir drásticamente el tamaño del build del server y por ende mejora también el rendimiento cuando se navega en el site.
 
 Comparando tamaño del build,
 
 | Antes | Después |
 |-|-|
 |![build size before](src/pokemon-build-size-before.png)|![build size after](src/pokemon-build-size-after.png)
+
+Inicialmente el website solicitaba el objeto entero de cada Pokémon a través del API en `getStaticProps`:
+
+````ts
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { id } = params as { id: string };
+  const { data } = await pokeApi.get<Pokemon>(`/pokemon/${id}`);
+
+  return {
+    props: {
+      pokemon: data,
+    },
+  };
+};
+````
+
+Sin embargo, se puede elegir no pasar a Static Props las propiedad innecesarias:
+
+````ts
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { id } = params as { id: string };
+
+  return {
+    props: {
+      pokemon: await getPokemonInfo( id ),
+    },
+  };
+};
+````
+
+````ts
+import pokeApi from "../api/pokeApi";
+import { Pokemon } from "../interfaces";
+
+export const getPokemonInfo = async (nameOrId: string) => {
+  const { data } = await pokeApi.get<Pokemon>(`/pokemon/${nameOrId}`);
+
+  return {
+    id: data.id,
+    name: data.name,
+    sprites: {
+      front_default: data.sprites.front_default,
+      back_default: data.sprites.back_default,
+      front_shiny: data.sprites.front_shiny,
+      back_shiny: data.sprites.back_shiny,
+      other: {
+        dream_world: {
+          front_default: data.sprites.other?.dream_world.front_default,
+        },
+      },
+    },
+  };
+};
+
+````
+
+Aquí solamente se pasa a través de `getStaticProps` las propiedades del JSON que se utilizarán.
 
 En cuando al tiempo que se demoró en generar el build, fue aproximadamente lo mismo:
 
