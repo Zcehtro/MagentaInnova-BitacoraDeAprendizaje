@@ -25,7 +25,7 @@ El funcionamiento con PWA's requiere de un servidor que puede ser un servicio co
 
 Con Android no hay problema, ya que el sistema operativo permite el uso de Push Notifications y lo fomenta debido a los mismos servicios ofrecidos por Google como Firebase.
 
-En la mayoría de los casos, se espera que la documentación que existe aplique para Android.
+En la mayoría de los casos, se espera que la documentación que existe para esta tecnología aplique para Android.
 
 ### iOS
 
@@ -36,8 +36,6 @@ Fuentes:
 
 iOS 16 es la versión que incorpora el soporte para Push Notifications en Safari; sin embargo, no lanzará la versión hasta el 2022-09, y no se sabe aún si será compatible con PWA's. Según Apple, no será una funcionalidad incorporada en el lanzamiento de iOS 16, sino que será en una actualización posterior:
 
-```text
-Now with iOS 16, this will become a reality. The first signs of push notifications for web apps appeared in iOS 15.4, but the feature never worked since it was labeled as “experimental.” Now, according to Apple’s website, iOS 16 and iPadOS 16 will finally enable web push notifications – but there’s a catch.
-
-Apple says the feature will come in 2023 with a future update of iOS 16, so it won’t be available at launch. At least the company has now finally confirmed that it is working on web push notifications.
-```
+> Now with iOS 16, this will become a reality. The first signs of push notifications for web apps appeared in iOS 15.4, but the feature never worked since it was labeled as “experimental.” Now, according to Apple’s website, iOS 16 and iPadOS 16 will finally enable web push notifications – but there’s a catch.
+>
+> Apple says the feature will come in 2023 with a future update of iOS 16, so it won’t be available at launch. At least the company has now finally confirmed that it is working on web push notifications.
