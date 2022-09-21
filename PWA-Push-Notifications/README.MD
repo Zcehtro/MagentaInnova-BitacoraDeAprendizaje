@@ -1,8 +1,8 @@
-# Push Notification: Investigación en disponibilidad y viabilidad para web browsers en desktop, Android, y iOS browsers
+# Push Notification: Investigación en disponibilidad y viabilidad para web browsers en desktop, Android, y iOS
 
 Last date of research: **2022-09-21**
 
-- [Push Notification: Investigación en disponibilidad y viabilidad para web browsers en desktop, Android, y iOS browsers](#push-notification-investigación-en-disponibilidad-y-viabilidad-para-web-browsers-en-desktop-android-y-ios-browsers)
+- [Push Notification: Investigación en disponibilidad y viabilidad para web browsers en desktop, Android, y iOS](#push-notification-investigación-en-disponibilidad-y-viabilidad-para-web-browsers-en-desktop-android-y-ios)
   - [Navegadores desktop](#navegadores-desktop)
   - [Android](#android)
   - [iOS](#ios)
